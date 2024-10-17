@@ -36,7 +36,6 @@ app.post('/api/resgister', (req, res) => {
     bot.sendMessage(process.env.CHAT_ID, message,  { parse_mode: 'HTML' });
 
 
-if(process.env.WEBHOOK_URL == undefined  || process.env.WEBHOOK_URL == ""){
     // ADD GOOGLE SHEET
     const url = new URL(process.env.WEBHOOK_URL);
 
@@ -64,7 +63,7 @@ if(process.env.WEBHOOK_URL == undefined  || process.env.WEBHOOK_URL == ""){
     .catch(error => {
         bot.sendMessage(chatId, 'Đã có lỗi xảy ra. Vui lòng thử lại sau!');
     });
-}
+
 
 });
 
